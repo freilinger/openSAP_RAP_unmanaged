@@ -9,9 +9,11 @@ define root view entity ZC_RAP_SFH_TRAVEL_U
 {
       //ZI_RAP_TRAVEL_U_####
   key TravelID,
-      @Consumption.valueHelpDefinition: [ { entity: { name: '/DMO/I_Agency', element: 'AgencyID' } } ]
+      --@Consumption.valueHelpDefinition: [ { entity: { name: '/DMO/I_Agency', element: 'AgencyID' } } ]
+      @Consumption.valueHelpDefinition: [{ entity: { name: 'zce_rap_sfh_agency', element: 'AgencyId'} }]
       @Search.defaultSearchElement: true
       AgencyID,
+      
       @Consumption.valueHelpDefinition: [ { entity: { name: '/DMO/I_Customer', element: 'CustomerID' } } ]
       @Search.defaultSearchElement: true
       CustomerID,
